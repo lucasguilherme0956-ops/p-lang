@@ -1,10 +1,11 @@
 {
     "name": "p-lang",
-    "displayName": "Языкъ «П»",
-    "description": "Поддержка языка программированія «П» — подсвѣтка синтаксиса и иконка файловъ .п",
-    "version": "1.1.0",
+    "displayName": "П — Языкъ программированія",
+    "description": "Русскоязычный языкъ программированія въ дореформенной орѳографіи. Подсвѣтка синтаксиса, автодополненіе, иконки файловъ .п",
+    "version": "1.2.0",
     "publisher": "p-lang",
     "icon": "icon.png",
+    "license": "MIT",
     "engines": {
         "vscode": "^1.75.0"
     },
@@ -13,13 +14,20 @@
     ],
     "keywords": [
         "П",
-        "п-язык",
+        "p-lang",
+        "russian",
+        "programming language",
         "старорусский",
-        "программирование"
+        "дореформенная орфография",
+        "syntax highlighting"
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/p-lang/p-lang-vscode"
+        "url": "https://github.com/lucasguilherme0956-ops/p-lang"
+    },
+    "homepage": "https://github.com/lucasguilherme0956-ops/p-lang#readme",
+    "bugs": {
+        "url": "https://github.com/lucasguilherme0956-ops/p-lang/issues"
     },
     "contributes": {
         "languages": [
