@@ -3,13 +3,13 @@
 <div align="center">
 
 ```
-  _______
-  |  _  _|
-  | | | |
-  | |_| |
-  |  ___|
-  | |        Языкъ программированія
-  |_|
+  ██████████████
+  ██          ██
+  ██          ██
+  ██          ██
+  ██          ██
+
+  Языкъ программированія
 ```
 
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
