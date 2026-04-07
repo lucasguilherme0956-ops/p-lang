@@ -1,0 +1,50 @@
+{
+    "name": "p-lang",
+    "displayName": "Языкъ «П»",
+    "description": "Поддержка языка программированія «П» — подсвѣтка синтаксиса и иконка файловъ .п",
+    "version": "1.1.0",
+    "publisher": "p-lang",
+    "icon": "icon.png",
+    "engines": {
+        "vscode": "^1.75.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "keywords": [
+        "П",
+        "п-язык",
+        "старорусский",
+        "программирование"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/p-lang/p-lang-vscode"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "p-lang",
+                "aliases": [
+                    "П",
+                    "P-lang"
+                ],
+                "extensions": [
+                    ".п"
+                ],
+                "icon": {
+                    "light": "./icons/p-file.svg",
+                    "dark": "./icons/p-file.svg"
+                },
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "p-lang",
+                "scopeName": "source.p",
+                "path": "./syntaxes/п.tmLanguage.json"
+            }
+        ]
+    }
+}

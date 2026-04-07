@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <!-- File shape -->
+    <path d="M6 2h14l6 6v20a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z" fill="#6B1D2A" />
+    <path d="M20 2l6 6h-4a2 2 0 0 1-2-2V2z" fill="#4A0F1A" />
+    <!-- Letter П -->
+    <text x="16" y="23" text-anchor="middle" font-family="Georgia, serif" font-size="14"
+        font-weight="bold" fill="#D4A843">П</text>
+</svg>

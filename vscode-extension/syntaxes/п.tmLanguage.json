@@ -1,0 +1,259 @@
+{
+    "scopeName": "source.p",
+    "name": "П",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#builtins"
+        },
+        {
+            "include": "#constants"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#function-def"
+        },
+        {
+            "include": "#class-def"
+        },
+        {
+            "include": "#function-call"
+        },
+        {
+            "include": "#methods"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.number-sign.п",
+                    "match": "#.*$"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.triple.double.п",
+                    "begin": "\"\"\"",
+                    "end": "\"\"\"",
+                    "patterns": [
+                        {
+                            "include": "#string-escapes"
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.triple.single.п",
+                    "begin": "'''",
+                    "end": "'''",
+                    "patterns": [
+                        {
+                            "include": "#string-escapes"
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.double.п",
+                    "begin": "\"",
+                    "end": "\"",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.п"
+                        }
+                    },
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.п"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#string-escapes"
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.п",
+                    "begin": "'",
+                    "end": "'",
+                    "beginCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.begin.п"
+                        }
+                    },
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.п"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "include": "#string-escapes"
+                        }
+                    ]
+                }
+            ]
+        },
+        "string-escapes": {
+            "patterns": [
+                {
+                    "name": "constant.character.escape.п",
+                    "match": "\\\\[nrt\\\\'\"]"
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.float.п",
+                    "match": "\\b\\d+\\.\\d+\\b"
+                },
+                {
+                    "name": "constant.numeric.integer.п",
+                    "match": "\\b\\d+\\b"
+                }
+            ]
+        },
+        "constants": {
+            "patterns": [
+                {
+                    "name": "constant.language.boolean.true.п",
+                    "match": "\\bистина\\b"
+                },
+                {
+                    "name": "constant.language.boolean.false.п",
+                    "match": "\\bложь\\b"
+                },
+                {
+                    "name": "constant.language.none.п",
+                    "match": "\\bничто\\b"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.flow.п",
+                    "match": "\\b(буде|инако\\s+буде|иначе|покуда|для\\s+каждаго|для|въ|прервать|продолжить|пропустить|возвратить)\\b"
+                },
+                {
+                    "name": "keyword.control.exception.п",
+                    "match": "\\b(попытка|перехватить|обязательно|возбудить)\\b"
+                },
+                {
+                    "name": "keyword.control.import.п",
+                    "match": "\\b(привезти|изъ|какъ)\\b"
+                },
+                {
+                    "name": "storage.type.declaration.п",
+                    "match": "\\b(объявить|постоянная)\\b"
+                },
+                {
+                    "name": "storage.type.function.п",
+                    "match": "\\b(функція|методъ|создатель|свойство)\\b"
+                },
+                {
+                    "name": "storage.type.class.п",
+                    "match": "\\b(классъ|наслѣдуетъ|новый)\\b"
+                },
+                {
+                    "name": "variable.language.self.п",
+                    "match": "\\b(сей|родительскій)\\b"
+                },
+                {
+                    "name": "keyword.operator.logical.п",
+                    "match": "\\b(и|или|не)\\b"
+                },
+                {
+                    "name": "keyword.operator.assignment.п",
+                    "match": "\\b(?:есть|\u0463сть)\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.comparison.п",
+                    "match": "\\b(равно|не\\s+равно|менѣе|болѣе|не\\s+болѣе|не\\s+менѣе)\\b"
+                },
+                {
+                    "name": "keyword.operator.arithmetic.п",
+                    "match": "\\b(плюсъ|минусъ|умножить|раздѣлить|нацѣло|остатокъ|въ\\s+степени)\\b"
+                }
+            ]
+        },
+        "builtins": {
+            "patterns": [
+                {
+                    "name": "support.function.builtin.п",
+                    "match": "\\b(печатать|вводъ|длина|діапазонъ|цѣлъ|вещъ|строка|списокъ|словарь|множество|булево|сортировать|абс|мін|мин|макс|сумма|перечислить|типъ|карта|фильтръ|любой|каждый|перевернуть|округлить|полъ|потолокъ|степень|корень)\\b"
+                }
+            ]
+        },
+        "function-def": {
+            "patterns": [
+                {
+                    "match": "\\b(функція|методъ|создатель)\\s+([а-яА-ЯёЁa-zA-Z_][а-яА-ЯёЁa-zA-Z0-9_]*)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.function.п"
+                        },
+                        "2": {
+                            "name": "entity.name.function.п"
+                        }
+                    }
+                }
+            ]
+        },
+        "class-def": {
+            "patterns": [
+                {
+                    "match": "\\b(классъ)\\s+([а-яА-ЯёЁa-zA-Z_][а-яА-ЯёЁa-zA-Z0-9_]*)",
+                    "captures": {
+                        "1": {
+                            "name": "storage.type.class.п"
+                        },
+                        "2": {
+                            "name": "entity.name.class.п"
+                        }
+                    }
+                }
+            ]
+        },
+        "function-call": {
+            "patterns": [
+                {
+                    "match": "\\b([а-яА-ЯёЁa-zA-Z_][а-яА-ЯёЁa-zA-Z0-9_]*)\\s*(?=\\()",
+                    "captures": {
+                        "1": {
+                            "name": "entity.name.function.call.п"
+                        }
+                    }
+                }
+            ]
+        },
+        "methods": {
+            "patterns": [
+                {
+                    "name": "support.function.method.п",
+                    "match": "\\.(срезъ|поискъ|замѣна|заглавныя|строчныя|раздробить|соединить|обрѣзать|содержитъ|начинается|заканчивается|добавить|извлечь|вставить|удалить|расширить|обратить|очистить|копія|счётъ|индексъ|ключи|значенія|пары|получить|обновить)\\b"
+                }
+            ]
+        }
+    }
+}
